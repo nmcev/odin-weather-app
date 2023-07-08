@@ -1,4 +1,4 @@
-import { apiKey } from "./apiKey.js";
+const apiKey = config.apiKey;
 // getting all html element for content 
 const mainTemperature = document.querySelector('.temp');
 const cityName = document.querySelector('.cityName');
