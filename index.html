@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="mainHeader">
+        <h1>Weather App</h1>
+    </header>
+
+    <main>
+        <!-- Search Bar and Form-->
+        <div class="searchContainer">
+            <form action="#" method="get">
+                <input type="text" placeholder="Enter City Name..." />
+                <button class="submitBtn" type="submit"><i class="fas fa-search"></i></button>
+
+            </form>
+        </div>
+
+
+        <div class="weather-card">
+            <p class="temp">41°C</p>
+            <h3 class="cityName">Erbil,<small class="small"> IQ</small></h3>
+            <div class="weather-status-container">
+                <p class="weather-status">Cloudy Night</p>
+                <img src="./assets/weather-status/cloudyNight.svg" class="weather-image">
+            </div>
+
+            <div class="tempretures-list">
+                <ul class="ul-degree">
+                    <li class="degree degree-1">feel like</li>
+                    <li class="degree degree-2">2</li>
+                    <li class="degree degree-3">3</li>
+                </ul>
+            </div>
+            <p class="time"></p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href=" https://github.com/nmcev/odin-weather-app" target="_blank">muha &#169
+                <img src="./assets/github.svg" alt="">
+            </a>
+        </div>
+    </footer>
+
+    <script src="scrpit/script.js" type="module"></script>
+</body>
+
+</html>
