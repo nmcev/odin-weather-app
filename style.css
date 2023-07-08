@@ -1,0 +1,189 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: hidden;
+    background-color: #fcfceb;
+    color: #194677;
+}
+
+#mainHeader {
+    padding: 10px;
+    color: #163f6c;
+    border-bottom: solid thin gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40%;
+    min-height: auto;
+    box-sizing: border-box;
+    position: relative;
+    z-index: -2;
+    top: -0.3em;
+    transition: .3s ease all;
+    cursor: pointer;
+    user-select: none;
+    margin: 10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+i {
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+main {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+input {
+    padding: .5em;
+    border-radius: 4px;
+    outline: none;
+    transition: .3s ease all;
+    border-style: none;
+    width: 200px;
+    height: 15px;
+    transition: .5s;
+    box-shadow: -2px 2px 35px rgba(0, 0, 0, .3), inset 2px 2px 7px white;
+
+}
+
+input:focus {
+    box-shadow: -2px 2px 17px rgba(0, 0, 0, .4), inset 2px 2px 7px white;
+    border-style: none;
+    max-width: 250px;
+}
+
+button {
+    background-color: #fffff5;
+    border-style: none;
+    height: 30px;
+    cursor: pointer;
+    width: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover {
+    max-width: 80%;
+    background-color: #c4c4c47b;
+    border-radius: 5px;
+}
+
+.weather-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.temp {
+    font-size: 45px;
+    padding: 0;
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.cityName {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.weather-status-container {
+    display: flex;
+    gap: .5rem;
+    margin-top: 0;
+}
+
+.weather-status {
+    background: #a9d6fea4;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tempretures-list{
+display: grid;
+place-content: center;
+margin: auto !important;
+}
+.ul-degree {
+    list-style: none outside none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    gap: 3.5rem;
+    font-weight: 400;
+    font-style: oblique;
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 0;
+}
+
+
+footer {
+    position: absolute;
+    bottom: .3em;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 13px;
+    transition: .2s ease all;
+
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+a:hover {
+    color: #d00000;
+}
+.small{
+    font-size: 16px;
+}
+.weatherIcon{
+    width: 80px;
+}
+.degree-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
