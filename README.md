@@ -1,2 +1,2 @@
 # odin-weather-app
-The Odin Project | Weather APp
+The Odin Project | Weather App 
