@@ -1,4 +1,4 @@
-const apiKey = config.apiKey;
+const apiKey = 'ae39ae6f7f6d49bfbfa202043230607'
 // getting all html element for content 
 const mainTemperature = document.querySelector('.temp');
 const cityName = document.querySelector('.cityName');
