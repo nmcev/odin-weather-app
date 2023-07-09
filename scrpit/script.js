@@ -7,7 +7,7 @@ const weatherStatus = document.querySelector('.weather-status');
 const weatherImage = document.querySelector('.weather-image');
 const temperatures = document.querySelectorAll('.degree');
 const time = document.querySelector('.time');
-
+const checkBox = document.querySelector('.checkBox')
 //getting user input value
 const input = document.querySelector('input')
 const submitBtn = document.querySelector('.submitBtn')
@@ -41,16 +41,18 @@ async function getWeatherData(city) {
         const _windKph = data.current.wind_kph;
         const _pressure = data.current.pressure_in
 
+        // getting temperature in °F
+        const _cityTempInF = data.current.temp_f
+        const _feelLikeInF = data.current.feelslike_f;
 
+        toggleInFAndC(_cityTempInF, _feelLikeInF, cityTemp, _feelLike)
         displayCityNameAndCountry(_cityName, _countryName)
-        displayTemperatureInC(cityTemp);
         displayTime(_time);
         displayFeelLike(_feelLike);
         displayWeatherIcon(_imageSrc);
         displayWeatherStatus(_weatherStatus);
         displayWindKph(_windKph);
         displayPressure(_pressure);
-        console.log(data);
     }
     catch (error) {
         alert('Error fetching data, please check your internet connection and API key.');
@@ -81,7 +83,7 @@ function displayTime(_time) {
 }
 
 function displayFeelLike(_feelLike) {
-    temperatures[0].textContent = "Feel like: " + _feelLike
+    temperatures[0].textContent = "Feel like: " + _feelLike + '°C'
 }
 
 function displayWeatherIcon(_imageSrc) {
@@ -112,3 +114,25 @@ function setInitialCity() {
     getWeatherData("moscow")
 }
 setInitialCity()
+
+function displayTemperatureInF(_cityTempInF) {
+    mainTemperature.textContent = `${_cityTempInF}°F`
+
+}
+function displayFeelLikeInF(_feelLikeInF) {
+    temperatures[0].textContent = "Feel like: " + _feelLikeInF + '°F'
+}
+
+function toggleInFAndC(_cityTempInF, _feelLikeInF, cityTemp, _feelLike) {
+    checkBox.addEventListener('change', function () {
+        if (this.checked == true) {
+            //convert to Fahrenheit
+            displayTemperatureInF(_cityTempInF)
+            displayFeelLikeInF(_feelLikeInF);
+        } else {
+            displayTemperatureInC(cityTemp);
+            displayFeelLike(_feelLike);
+        };
+
+    });
+}
