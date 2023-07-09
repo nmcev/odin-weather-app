@@ -136,3 +136,17 @@ function toggleInFAndC(_cityTempInF, _feelLikeInF, cityTemp, _feelLike) {
 
     });
 }
+
+let body = document.querySelector('body');
+let icon = document.querySelector('#icon');
+icon.src = "assets/weather-status/sun.svg";
+
+icon.addEventListener('click', function () {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        this.src = './assets/weather-status/moon.svg';
+    }
+    else {
+        this.src = "assets/weather-status/sun.svg";
+    }
+})

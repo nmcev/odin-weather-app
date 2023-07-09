@@ -13,7 +13,6 @@ body {
 
 #mainHeader {
     padding: 10px;
-    color: #163f6c;
     border-bottom: solid thin gray;
     display: flex;
     justify-content: center;
@@ -247,4 +246,45 @@ a:hover {
 
 .switch input[type="checkbox"]:checked:active+.slider::after {
     transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+}
+
+.icon {
+    width: 45px;
+}
+
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.icon-pop {
+    display: none;
+}
+
+.dark-mode {
+    background-color: #262626;
+}
+
+
+
+.dark-mode {
+    background-color: #262626;
+    color: #fcfceb;
+}
+
+.dark-mode .weather-status {
+    background-color: #f4c542;
+    padding: 0.4rem;
+}
+
+.dark-mode a {
+    color: white;
+}
+.dark-mode #mainHeader{
+    color: #ff8214;
+}
+#icon{
+    margin-left: 1.3rem;
+    width: 26px;
+    height: auto;
 }
