@@ -72,7 +72,7 @@ input:focus {
 }
 
 button {
-    background-color: #fffff5;
+    background-color: transparent;
     border-style: none;
     height: 30px;
     cursor: pointer;
@@ -284,6 +284,22 @@ a:hover {
 
 .dark-mode #mainHeader {
     color: #ff8214;
+}
+
+.dark-mode button {
+    background-color: transparent;
+}
+
+.dark-mode i {
+    color: white !important;
+}
+
+.dark-mode input {
+    background-color: #262626;
+    border: none ! important;
+    box-shadow: inset -7px -9px 10px rgba(0, 0, 0, .2), inset 7px 9px 10px rgba(2, 2, 2, .2);
+    color: whitesmoke;
+
 }
 
 #icon {
