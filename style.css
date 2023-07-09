@@ -132,7 +132,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    gap: 3.5rem;
+    gap: 2.5rem;
     font-weight: 400;
     font-style: oblique;
     font-size: 1.25rem;
@@ -280,10 +280,12 @@ a:hover {
 .dark-mode a {
     color: white;
 }
-.dark-mode #mainHeader{
+
+.dark-mode #mainHeader {
     color: #ff8214;
 }
-#icon{
+
+#icon {
     margin-left: 1.3rem;
     width: 26px;
     height: auto;
