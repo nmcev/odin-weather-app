@@ -46,6 +46,7 @@ async function getWeatherData(city) {
         const _feelLikeInF = data.current.feelslike_f;
 
         toggleInFAndC(_cityTempInF, _feelLikeInF, cityTemp, _feelLike)
+        displayTemperatureInC(cityTemp)
         displayCityNameAndCountry(_cityName, _countryName)
         displayTime(_time);
         displayFeelLike(_feelLike);
