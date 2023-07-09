@@ -1,5 +1,5 @@
 const apiKey = 'ae39ae6f7f6d49bfbfa202043230607'
-// getting all html element for content 
+// DOM elements
 const mainTemperature = document.querySelector('.temp');
 const cityName = document.querySelector('.cityName');
 const countryName = document.querySelector('.small');
@@ -8,10 +8,15 @@ const weatherImage = document.querySelector('.weather-image');
 const temperatures = document.querySelectorAll('.degree');
 const time = document.querySelector('.time');
 const checkBox = document.querySelector('.checkBox')
-//getting user input value
 const input = document.querySelector('input')
 const submitBtn = document.querySelector('.submitBtn')
+let body = document.querySelector('body');
+let icon = document.querySelector('#icon');
 
+// Initial setup
+setInitialCity();
+
+// Event listeners
 submitBtn.addEventListener('click', function () {
     let searchCity = input.value; //get the entered text from user
     if (searchCity == "mosul" || searchCity == "Mosul") {
@@ -27,6 +32,17 @@ submitBtn.addEventListener('click', function () {
     input.value = ''
 })
 
+icon.addEventListener('click', function () {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        this.src = './assets/weather-status/moon.svg';
+    }
+    else {
+        this.src = "assets/weather-status/sun.svg";
+    }
+})
+
+// functions 
 async function getWeatherData(city) {
     try {
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`, { mode: "cors" })
@@ -114,7 +130,6 @@ function displayPressure(_pressure) {
 function setInitialCity() {
     getWeatherData("moscow")
 }
-setInitialCity()
 
 function displayTemperatureInF(_cityTempInF) {
     mainTemperature.textContent = `${_cityTempInF}°F`
@@ -138,16 +153,5 @@ function toggleInFAndC(_cityTempInF, _feelLikeInF, cityTemp, _feelLike) {
     });
 }
 
-let body = document.querySelector('body');
-let icon = document.querySelector('#icon');
-icon.src = "assets/weather-status/sun.svg";
-
-icon.addEventListener('click', function () {
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        this.src = './assets/weather-status/moon.svg';
-    }
-    else {
-        this.src = "assets/weather-status/sun.svg";
-    }
-})
+// Initialize dark mode icon
+icon.src = 'assets/weather-status/sun.svg';
